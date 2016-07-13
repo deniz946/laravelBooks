@@ -40,5 +40,5 @@ Route::group(['prefix' => 'lara/public'], function(){
 
 
 	Route::auth();
-})
+});
 

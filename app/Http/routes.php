@@ -12,33 +12,31 @@
 */
 
 
-Route::group(['prefix' => 'lara/public'], function(){
-	Route::get('/', 'BooksController@index');
+Route::get('/', 'BooksController@index');
 
-	Route::resource('books', 'BooksController');
+Route::resource('books', 'BooksController');
 
-	Route::group(['prefix' => 'admin', "middleware" => 'auth'], function(){
+Route::group(['prefix' => 'admin', "middleware" => 'auth'], function(){
 
-		Route::get('/', 'AdminController@index');
+	Route::get('/', 'AdminController@index');
 
-		//ROLES ROUTES
-		Route::resource('roles', 'RolesController');
+	//ROLES ROUTES
+	Route::resource('roles', 'RolesController');
 
-		//PERMISSIONS ROUTES
-		Route::resource('permissions', 'PermissionsController');
+	//PERMISSIONS ROUTES
+	Route::resource('permissions', 'PermissionsController');
 
-		//USERS ROUTES
-		Route::resource('users', 'UsersController');
-		Route::get('/users/profile', 'UsersController@profile');
-	});
-
-	Route::group(['prefix' => 'users', 'middleware' => 'auth'], function(){
-		
-		Route::get('profile', ['uses' => 'UsersController@profile',
-			'as' => 'users.profile']);
-	});
-
-
-	Route::auth();
+	//USERS ROUTES
+	Route::resource('users', 'UsersController');
+	Route::get('/users/profile', 'UsersController@profile');
 });
+
+Route::group(['prefix' => 'users', 'middleware' => 'auth'], function(){
+	
+	Route::get('profile', ['uses' => 'UsersController@profile',
+		'as' => 'users.profile']);
+});
+
+
+Route::auth();
 

@@ -18,6 +18,10 @@
   </a>
   <div class="right menu">
     
+    <div class="item">
+        <a href="{{ route('books.create') }}"><button class="ui primary basic button">Add book</button></a>
+    </div>
+
     @unless (Auth::check())
         <div class="item">
             <a href="/login"><div class="ui primary button">Login</div></a>

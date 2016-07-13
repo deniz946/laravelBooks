@@ -11,6 +11,6 @@ class BooksSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Book::class, 100)->create();
+        factory(App\Book::class, 3)->create();
     }
 }

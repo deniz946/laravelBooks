@@ -17,7 +17,6 @@ class CreateBookTable extends Migration
             $table->string('title');
             $table->integer('year');
             $table->text('description');
-            $table->string('genre');
             $table->string('author');
             $table->string('img');
             $table->integer('user_id')->unsigned();

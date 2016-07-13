@@ -15,6 +15,11 @@ class Book extends Model
         return $this->belongsTo('App\User');
     }
 
+    public function genres()
+    {
+        return $this->belongsToMany('App\Genre', 'genre_book');
+    }
+
     public function scopeSearch($query, $search)
     {
 

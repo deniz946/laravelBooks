@@ -12,7 +12,7 @@
 */
 
 
-Route::group(['prefix'] => 'lara/public', function(){
+Route::group(['prefix' => 'lara/public'], function(){
 	Route::get('/', 'BooksController@index');
 
 	Route::resource('books', 'BooksController');

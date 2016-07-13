@@ -21,7 +21,7 @@
 	 	      <img src="{{$book->img}}">
 	 	    </div>
 	 	    <div class="content">
-		 	  <i class="right floated star icon"></i>
+	 	    
 	 	      <a class="header">{{$book->title}}</a>
 	 	      <div class="meta">
 	 	        <span class="date">{{$book->genre}}</span>
@@ -49,6 +49,8 @@
 		$('.special.cards .image').dimmer({
 		  on: 'hover'
 		});
+
+
 	</script>
 @stop
 

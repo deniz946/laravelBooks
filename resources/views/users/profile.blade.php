@@ -37,7 +37,7 @@
 		      <div class="tab-content">
 		        <div class="tab-pane fade in active" id="tab1">
 		          <p>Email: {{$user->email}}</p>
-		          <p>Books: 5</p>
+		          <p>Books: {{count($user->book)}}</p>
 		          <button class="btn btn-primary">Edit</button>
 
 		        </div>

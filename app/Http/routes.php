@@ -12,9 +12,9 @@
 */
 
 
-Route::get('/', 'BooksController@index');
+Route::get('/lara/public', 'BooksController@index');
 
-Route::resource('books', 'BooksController');
+Route::resource('lara/public/books', 'BooksController');
 
 Route::group(['prefix' => 'admin', "middleware" => 'auth'], function(){
 

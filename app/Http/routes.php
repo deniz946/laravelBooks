@@ -12,7 +12,7 @@
 */
 
 
-Route::get('/lara/public', 'BooksController@index');
+Route::get('/', 'BooksController@index');
 
 Route::resource('lara/public/books', 'BooksController');
 
